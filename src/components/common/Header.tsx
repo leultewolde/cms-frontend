@@ -23,7 +23,7 @@ enum PageStatus {
 }
 
 const navigation = [
-    {name: 'Home', href: '/', current: true, protected: PageStatus.NEUTRAL},
+    {name: 'Home', href: '/', current: true, protected: PageStatus.PROTECTED},
     // { name: 'Users', href: '/users', current: false, protected: PageStatus.PROTECTED },
     // {name: 'Contents', href: '/contents', current: false, protected: PageStatus.PROTECTED},
     {name: 'Tasks', href: '/tasks', current: false, protected: PageStatus.PROTECTED},

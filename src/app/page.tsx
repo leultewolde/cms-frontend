@@ -1,6 +1,8 @@
+'use client';
 import {NextPage} from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import withAuth from "@/components/withAuth";
 
 const Home: NextPage = () => {
   return (
@@ -23,4 +25,4 @@ const Home: NextPage = () => {
   );
 }
 
-export default Home;
+export default withAuth(Home);

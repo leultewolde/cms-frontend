@@ -80,9 +80,10 @@ type SelectMenuProps = {
     label: string,
     values: MenuOption[],
     onChange: (value: MenuOption) => void,
+    disabled?: boolean
 }
 
-export default function SelectMenu({label, values, onChange}: SelectMenuProps) {
+export default function SelectMenu({label, values, onChange, disabled = false}: SelectMenuProps) {
     const [selected, setSelected] = useState(values[0]);
 
     const changeSelectedValue = (value: MenuOption) => {
@@ -110,6 +111,7 @@ export default function SelectMenu({label, values, onChange}: SelectMenuProps) {
 
                         <ListboxOptions
                             // transition
+                            aria-disabled={disabled}
                             className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none data-[closed]:data-[leave]:opacity-0 data-[leave]:transition data-[leave]:duration-100 data-[leave]:ease-in sm:text-sm"
                         >
                             {values.map((val) => (

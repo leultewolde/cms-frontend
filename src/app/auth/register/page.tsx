@@ -117,7 +117,7 @@ const RegisterPage = () => {
                         </div>
                     </div>
 
-                    <SelectMenu label="Role" values={[
+                    <SelectMenu disabled label="Role" values={[
                         {id: 1, name: "Administrator", value: Role.ADMINISTRATOR.toString()},
                         {id: 2, name: "Contributor", value: Role.CONTRIBUTOR.toString()},
                         {id: 3, name: "Reviewer", value: Role.REVIEWER.toString()}
