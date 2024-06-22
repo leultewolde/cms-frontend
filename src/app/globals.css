@@ -3,31 +3,100 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+    ) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+input, select, textarea {
+    color: #333333;
+    padding: 10px;
+}
+
+button {
+    background-color: rgb(var(--foreground-rgb));
+    color: #333333;
+    padding-block: 3px;
+    padding-inline: 8px;
+    border-radius: 3px;
+    margin: 8px 5px;
+    border: 1px rgb(var(--foreground-rgb)) solid;
+}
+
+button:hover {
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+    ) rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    border: 1px rgb(var(--foreground-rgb)) solid;
+}
+
+.comp-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-title {
+
+}
+
+.form {
+    border: 1px #ffffff solid;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.input-container {
+    margin: 5px;
+}
+
+.input-container label {
+    display: none;
+}
+
+.input-container input, select {
+    padding-inline: 10px;
+    padding-block: 5px;
+    border-radius: 3px;
+    margin-block: 5px;
+    width: 100%;
+}
+
+.center-div {
+    padding: 0 0.5rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

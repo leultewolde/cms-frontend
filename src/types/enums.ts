@@ -1,0 +1,32 @@
+export enum TaskStatus {
+    ASSIGNED = 'ASSIGNED',
+    IN_PROGRESS = 'IN_PROGRESS',
+    IN_REVIEW = 'IN_REVIEW',
+    WAITING_FOR_PUBLICATION = 'WAITING_FOR_PUBLICATION',
+    COMPLETED = 'COMPLETED',
+    SENT_BACK = 'SENT_BACK',
+    PENDING = 'PENDING',
+    CLOSED = 'CLOSED',
+}
+
+export enum Role {
+    ADMINISTRATOR = 'ADMINISTRATOR',
+    CONTRIBUTOR = 'CONTRIBUTOR',
+    REVIEWER = 'REVIEWER',
+}
+
+export enum ReviewStatus {
+    PENDING = 'PENDING',
+    APPROVED = 'APPROVED',
+    REJECTED = 'REJECTED',
+    REVIEWED = 'REVIEWED',
+}
+
+export enum ContentStatus {
+    DRAFT = 'DRAFT',
+    IN_REVIEW = 'IN_REVIEW',
+    APPROVED = 'APPROVED',
+    NEEDS_FIXING = 'NEEDS_FIXING',
+    COMPLETED = 'COMPLETED',
+    PUBLISHED = 'PUBLISHED',
+}
