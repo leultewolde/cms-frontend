@@ -10,7 +10,7 @@ const UserForm = ({addUser}: { addUser: (user: UserResponseDTO) => void }) => {
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
-        const newUser: UserRequestDTO = {username, email, role};
+        const newUser: UserRequestDTO = {username, role};
         try {
             const response = await createUser(newUser);
             addUser(response);

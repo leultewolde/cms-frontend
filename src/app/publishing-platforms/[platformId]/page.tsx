@@ -23,7 +23,7 @@ export default async function PlatformDetail({ params }: PlatformDetailProps) {
     return (
         <div>
             <h1>{platform.platformName}</h1>
-            <p>API Integration Details: {platform.APIIntegrationDetails}</p>
+            <p>API Integration Details: {platform.api_integration_details}</p>
         </div>
     );
 }

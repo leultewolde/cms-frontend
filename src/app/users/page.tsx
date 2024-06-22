@@ -47,7 +47,6 @@ const Users: NextPage = () => {
                 {users.map(user => (
                     <tr key={user.userId}>
                         <td className="border px-4 py-2"><Link href={`/users/${user.username}`}>{user.username}</Link></td>
-                        <td className="border px-4 py-2">{user.email}</td>
                         <td className="border px-4 py-2">{user.role.toString()}</td>
                     </tr>
                 ))}

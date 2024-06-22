@@ -22,7 +22,6 @@ export default async function UserDetail({ params }: UserDetailProps) {
     return (
         <div>
             <h1>{user.username}</h1>
-            <p>Email: {user.email}</p>
             <p>Role: {user.role}</p>
         </div>
     );
